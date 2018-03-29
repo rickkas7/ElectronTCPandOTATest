@@ -1,10 +1,10 @@
 #include "Particle.h"
 #include "TCPTester.h"
 
-// ALL_LEVEL
-SerialDebugOutput debugOutput(9600, DEBUG_LEVEL);
+// ALL_LEVEL, DEBUG_LEVEL
+SerialDebugOutput debugOutput(9600, ALL_LEVEL);
 
-//SYSTEM_THREAD(ENABLED);
+SYSTEM_THREAD(ENABLED);
 
 TCPTester tcpTester(IPAddress(65, 19, 178, 42), 7123);
 

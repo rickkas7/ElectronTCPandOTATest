@@ -1,0 +1,284 @@
+SYSTEM_THREAD(ENABLED)
+TCPClient connect right after Particle.connected()
+
+
+0000003000 [app] INFO: updatesPending=0
+0000004000 [app] INFO: updatesPending=0
+     4.280 AT read  +   17 "\r\n+UUSORD: 0,33\r\n"
+Socket 0: handle 0 has 33 bytes pending
+     4.290 AT send      17 "AT+USORF=0,1024\r\n"
+     4.310 AT read  +   72 "\r\n+USORF: 0,\"54.175.126.153\",5684,33,\"\x17\xfe\xfd\x00\x01\x00\x00\x00\x00\x01\xe2\x00\x14\x00\x01\x00\x00\x00\x00\x01\xe2\xf4~|\xa6!L\xfe+\xe7\xc0\x87`\""
+     4.324 AT read OK    6 "\r\nOK\r\n"
+0000004325 [system] TRACE: received 33
+0000004325 [comm.coap] TRACE: recieved ACK for message id=2ab
+0000004327 [comm.protocol.handshake] INFO: Handshake completed
+0000004329 [system] INFO: Send subscriptions
+0000004329 [comm.coap] TRACE: sending message id=2ac
+0000004331 [system] TRACE: send 41
+socketSendTo(0,54.175.126.153,5684,,41)
+     4.330 AT send      37 "AT+USOST=0,\"54.175.126.153\",5684,41\r\n"
+     4.342 AT read  >    3 "\r\n@"
+     4.392 AT send      41 "\x17\xfe\xfd\x00\x01\x00\x00\x00\x00\x01\x11\x00\x1c\x00\x01\x00\x00\x00\x00\x01\x11\xf3\x92Z\xf4\xc5 \xe5\xa7:\xe0\xc9n\xf7}xFx\xac\xe5u"
+     4.534 AT read  +   16 "\r\n+USOST: 0,41\r\n"
+     4.544 AT read OK    6 "\r\nOK\r\n"
+0000004545 [comm.dtls] INFO: session cmd (CLS,DIS,MOV,LOD,SAV): 4
+0000004545 [comm.dtls] INFO: session cmd (CLS,DIS,MOV,LOD,SAV): 3
+0000004547 [comm] INFO: Sending TIME request
+0000004547 [comm.coap] TRACE: sending message id=2ad
+0000004547 [system] TRACE: send 36
+socketSendTo(0,54.175.126.153,5684,,36)
+     4.548 AT send      37 "AT+USOST=0,\"54.175.126.153\",5684,36\r\n"
+     4.560 AT read  >    3 "\r\n@"
+     4.610 AT send      36 "\x17\xfe\xfd\x00\x01\x00\x00\x00\x00\x01\x12\x00\x17\x00\x01\x00\x00\x00\x00\x01\x12\xd7y\xb1\x7fM)\xc3\xd8\x1d\xec\x1b\xb5\xafg\xe6"
+     4.752 AT read  +   16 "\r\n+USOST: 0,36\r\n"
+     4.762 AT read OK    6 "\r\nOK\r\n"
+0000004773 [system] INFO: Cloud connected
+0000004773 [app] INFO: connecting to 65.19.178.42:7123
+0000004773 [wiring] TRACE: sock -1 closesocket
+socketSocket(TCP)
+     4.782 AT send      12 "AT+USOCR=6\r\n"
+     4.792 AT read  +   13 "\r\n+USOCR: 1\r\n"
+     4.802 AT read OK    6 "\r\nOK\r\n"
+Socket 1: handle 1 was created
+0000004803 [wiring] TRACE: socket=1
+0000004803 [wiring] TRACE: sock 1 connect
+socketConnect(1,port:7123)
+     4.803 AT send      32 "AT+USOCO=1,\"65.19.178.42\",7123\r\n"
+     4.814 AT read  +   17 "\r\n+UUSORD: 0,33\r\n"
+Socket 0: handle 0 has 33 bytes pending
+     5.285 AT read OK    6 "\r\nOK\r\n"
+0000005286 [wiring] TRACE: sock 1 connected=1
+0000005286 [app] INFO: connected
+0000005286 [app] INFO: updatesPending=0
+     5.296 AT send      17 "AT+USORF=0,1024\r\n"
+     5.316 AT read  +   72 "\r\n+USORF: 0,\"54.175.126.153\",5684,33,\"\x17\xfe\xfd\x00\x01\x00\x00\x00\x00\x01\xe3\x00\x14\x00\x01\x00\x00\x00\x00\x01\xe3PX\xa3\x14\xcd\xc4\x15\x1f\xa2WZ\xc2\""
+     5.328 AT read OK    6 "\r\nOK\r\n"
+0000005329 [system] TRACE: received 33
+0000005329 [comm.coap] TRACE: recieved ACK for message id=2ac
+0000005330 [comm.protocol] INFO: rcv'd message type=13
+     5.329 AT read  +   17 "\r\n+UUSORF: 0,39\r\n"
+Socket 0: handle 0 has 39 bytes pending
+0000006291 [app] INFO: updatesPending=0
+0000007291 [app] INFO: updatesPending=0
+0000008291 [app] INFO: updatesPending=0
+0000009291 [app] INFO: updatesPending=0
+0000010291 [app] INFO: sending 0x00
+    10.290 AT send      14 "AT+USOWR=1,1\r\n"
+    10.300 AT read  >    3 "\r\n@"
+    10.350 AT send       1 "\x00"
+    10.480 AT read  +   15 "\r\n+USOWR: 1,1\r\n"
+    10.490 AT read OK    6 "\r\nOK\r\n"
+0000010491 [app] INFO: updatesPending=0
+    10.920 AT read  +   16 "\r\n+UUSORD: 1,2\r\n"
+Socket 1: handle 1 has 2 bytes pending
+socketRecv: _cbUSORD
+    10.940 AT send      14 "AT+USORD=1,2\r\n"
+    10.950 AT read  +   18 "\r\n+USORD: 1,2,\"00\""
+    10.960 AT read OK    6 "\r\nOK\r\n"
+0000010971 [wiring] TRACE: recv(=2)
+0000010971 [app] INFO: got 0x30
+0000010981 [app] INFO: got 0x30
+0000011491 [app] INFO: updatesPending=0
+0000012491 [app] INFO: updatesPending=0
+0000013491 [app] INFO: updatesPending=0
+0000014491 [app] INFO: updatesPending=0
+0000015291 [app] INFO: sending 0x01
+    15.290 AT send      14 "AT+USOWR=1,1\r\n"
+    15.300 AT read  >    3 "\r\n@"
+    15.350 AT send       1 "\x01"
+    15.480 AT read  +   15 "\r\n+USOWR: 1,1\r\n"
+    15.490 AT read OK    6 "\r\nOK\r\n"
+0000015491 [app] INFO: updatesPending=0
+    15.880 AT read  +   16 "\r\n+UUSORD: 1,2\r\n"
+Socket 1: handle 1 has 2 bytes pending
+socketRecv: _cbUSORD
+    15.900 AT send      14 "AT+USORD=1,2\r\n"
+    15.910 AT read  +   18 "\r\n+USORD: 1,2,\"01\""
+    15.920 AT read OK    6 "\r\nOK\r\n"
+0000015931 [wiring] TRACE: recv(=2)
+0000015931 [app] INFO: got 0x30
+0000015941 [app] INFO: got 0x31
+0000016491 [app] INFO: updatesPending=0
+0000017491 [app] INFO: updatesPending=0
+0000018491 [app] INFO: updatesPending=0
+0000019491 [app] INFO: updatesPending=0
+0000020291 [app] INFO: sending 0x02
+    20.290 AT send      14 "AT+USOWR=1,1\r\n"
+    20.300 AT read  >    3 "\r\n@"
+    20.350 AT send       1 "\x02"
+    20.480 AT read  +   15 "\r\n+USOWR: 1,1\r\n"
+    20.490 AT read OK    6 "\r\nOK\r\n"
+0000020491 [app] INFO: updatesPending=0
+    20.880 AT read  +   16 "\r\n+UUSORD: 1,2\r\n"
+Socket 1: handle 1 has 2 bytes pending
+socketRecv: _cbUSORD
+    20.900 AT send      14 "AT+USORD=1,2\r\n"
+    20.910 AT read  +   18 "\r\n+USORD: 1,2,\"02\""
+    20.920 AT read OK    6 "\r\nOK\r\n"
+0000020931 [wiring] TRACE: recv(=2)
+0000020931 [app] INFO: got 0x30
+0000020941 [app] INFO: got 0x32
+0000021491 [app] INFO: updatesPending=0
+0000022491 [app] INFO: updatesPending=0
+0000023491 [app] INFO: updatesPending=0
+0000024491 [app] INFO: updatesPending=0
+0000025291 [app] INFO: sending 0x03
+    25.290 AT send      14 "AT+USOWR=1,1\r\n"
+    25.300 AT read  >    3 "\r\n@"
+    25.350 AT send       1 "\x03"
+    25.480 AT read  +   15 "\r\n+USOWR: 1,1\r\n"
+    25.490 AT read OK    6 "\r\nOK\r\n"
+0000025491 [app] INFO: updatesPending=0
+    25.910 AT read  +   16 "\r\n+UUSORD: 1,2\r\n"
+Socket 1: handle 1 has 2 bytes pending
+socketRecv: _cbUSORD
+    25.930 AT send      14 "AT+USORD=1,2\r\n"
+    25.940 AT read  +   18 "\r\n+USORD: 1,2,\"03\""
+    25.950 AT read OK    6 "\r\nOK\r\n"
+0000025961 [wiring] TRACE: recv(=2)
+0000025961 [app] INFO: got 0x30
+0000025971 [app] INFO: got 0x33
+0000026491 [app] INFO: updatesPending=0
+0000027491 [app] INFO: updatesPending=0
+0000028491 [app] INFO: updatesPending=0
+0000029491 [app] INFO: updatesPending=0
+0000030291 [app] INFO: sending 0x04
+    30.290 AT send      14 "AT+USOWR=1,1\r\n"
+    30.300 AT read  >    3 "\r\n@"
+    30.350 AT send       1 "\x04"
+    30.480 AT read  +   15 "\r\n+USOWR: 1,1\r\n"
+    30.490 AT read OK    6 "\r\nOK\r\n"
+0000030491 [app] INFO: updatesPending=0
+    30.880 AT read  +   16 "\r\n+UUSORD: 1,2\r\n"
+Socket 1: handle 1 has 2 bytes pending
+socketRecv: _cbUSORD
+    30.901 AT send      14 "AT+USORD=1,2\r\n"
+    30.911 AT read  +   18 "\r\n+USORD: 1,2,\"04\""
+    30.921 AT read OK    6 "\r\nOK\r\n"
+0000030932 [wiring] TRACE: recv(=2)
+0000030932 [app] INFO: got 0x30
+0000030942 [app] INFO: got 0x34
+0000031492 [app] INFO: updatesPending=0
+0000032492 [app] INFO: updatesPending=0
+0000033492 [app] INFO: updatesPending=0
+0000034492 [app] INFO: updatesPending=0
+0000035292 [app] INFO: sending 0x05
+    35.291 AT send      14 "AT+USOWR=1,1\r\n"
+    35.301 AT read  >    3 "\r\n@"
+    35.351 AT send       1 "\x05"
+    35.481 AT read  +   15 "\r\n+USOWR: 1,1\r\n"
+    35.491 AT read OK    6 "\r\nOK\r\n"
+0000035492 [app] INFO: updatesPending=0
+    35.881 AT read  +   16 "\r\n+UUSORD: 1,2\r\n"
+Socket 1: handle 1 has 2 bytes pending
+socketRecv: _cbUSORD
+    35.901 AT send      14 "AT+USORD=1,2\r\n"
+    35.911 AT read  +   18 "\r\n+USORD: 1,2,\"05\""
+    35.921 AT read OK    6 "\r\nOK\r\n"
+0000035932 [wiring] TRACE: recv(=2)
+0000035932 [app] INFO: got 0x30
+0000035942 [app] INFO: got 0x35
+0000036492 [app] INFO: updatesPending=0
+0000037492 [app] INFO: updatesPending=0
+0000038492 [app] INFO: updatesPending=0
+0000039492 [app] INFO: updatesPending=0
+0000040292 [app] INFO: sending 0x06
+    40.291 AT send      14 "AT+USOWR=1,1\r\n"
+    40.301 AT read  >    3 "\r\n@"
+    40.351 AT send       1 "\x06"
+    40.481 AT read  +   15 "\r\n+USOWR: 1,1\r\n"
+    40.491 AT read OK    6 "\r\nOK\r\n"
+0000040492 [app] INFO: updatesPending=0
+    40.881 AT read  +   16 "\r\n+UUSORD: 1,2\r\n"
+Socket 1: handle 1 has 2 bytes pending
+socketRecv: _cbUSORD
+    40.902 AT send      14 "AT+USORD=1,2\r\n"
+    40.912 AT read  +   18 "\r\n+USORD: 1,2,\"06\""
+    40.922 AT read OK    6 "\r\nOK\r\n"
+0000040933 [wiring] TRACE: recv(=2)
+0000040933 [app] INFO: got 0x30
+0000040943 [app] INFO: got 0x36
+0000041493 [app] INFO: updatesPending=0
+0000042493 [app] INFO: updatesPending=0
+0000043493 [app] INFO: updatesPending=0
+0000044493 [app] INFO: updatesPending=0
+0000045293 [app] INFO: sending 0x07
+    45.292 AT send      14 "AT+USOWR=1,1\r\n"
+    45.302 AT read  >    3 "\r\n@"
+    45.352 AT send       1 "\a"
+    45.482 AT read  +   15 "\r\n+USOWR: 1,1\r\n"
+    45.492 AT read OK    6 "\r\nOK\r\n"
+0000045493 [app] INFO: updatesPending=0
+    45.882 AT read  +   16 "\r\n+UUSORD: 1,2\r\n"
+Socket 1: handle 1 has 2 bytes pending
+socketRecv: _cbUSORD
+    45.903 AT send      14 "AT+USORD=1,2\r\n"
+    45.913 AT read  +   18 "\r\n+USORD: 1,2,\"07\""
+    45.923 AT read OK    6 "\r\nOK\r\n"
+0000045934 [wiring] TRACE: recv(=2)
+0000045934 [app] INFO: got 0x30
+0000045944 [app] INFO: got 0x37
+0000046494 [app] INFO: updatesPending=0
+0000047494 [app] INFO: updatesPending=0
+0000048494 [app] INFO: updatesPending=0
+0000049494 [app] INFO: updatesPending=0
+0000050294 [app] INFO: sending 0x08
+    50.293 AT send      14 "AT+USOWR=1,1\r\n"
+    50.303 AT read  >    3 "\r\n@"
+    50.353 AT send       1 "\b"
+    50.483 AT read  +   15 "\r\n+USOWR: 1,1\r\n"
+    50.493 AT read OK    6 "\r\nOK\r\n"
+0000050494 [app] INFO: updatesPending=0
+    50.893 AT read  +   16 "\r\n+UUSORD: 1,2\r\n"
+Socket 1: handle 1 has 2 bytes pending
+socketRecv: _cbUSORD
+    50.913 AT send      14 "AT+USORD=1,2\r\n"
+    50.923 AT read  +   18 "\r\n+USORD: 1,2,\"08\""
+    50.933 AT read OK    6 "\r\nOK\r\n"
+0000050944 [wiring] TRACE: recv(=2)
+0000050944 [app] INFO: got 0x30
+0000050954 [app] INFO: got 0x38
+0000051494 [app] INFO: updatesPending=0
+0000052494 [app] INFO: updatesPending=0
+0000053494 [app] INFO: updatesPending=0
+0000054494 [app] INFO: updatesPending=0
+0000055294 [app] INFO: sending 0x09
+    55.293 AT send      14 "AT+USOWR=1,1\r\n"
+    55.303 AT read  >    3 "\r\n@"
+    55.353 AT send       1 "\t"
+    55.483 AT read  +   15 "\r\n+USOWR: 1,1\r\n"
+    55.493 AT read OK    6 "\r\nOK\r\n"
+0000055494 [app] INFO: updatesPending=0
+    55.933 AT read  +   16 "\r\n+UUSORD: 1,2\r\n"
+Socket 1: handle 1 has 2 bytes pending
+socketRecv: _cbUSORD
+    55.954 AT send      14 "AT+USORD=1,2\r\n"
+    55.964 AT read  +   18 "\r\n+USORD: 1,2,\"09\""
+    55.974 AT read OK    6 "\r\nOK\r\n"
+0000055985 [wiring] TRACE: recv(=2)
+0000055985 [app] INFO: got 0x30
+0000055995 [app] INFO: got 0x39
+0000056495 [app] INFO: updatesPending=0
+0000057495 [app] INFO: updatesPending=0
+0000058495 [app] INFO: updatesPending=0
+0000059495 [app] INFO: updatesPending=0
+0000060295 [app] INFO: sending 0x0a
+    60.294 AT send      14 "AT+USOWR=1,1\r\n"
+    60.304 AT read  >    3 "\r\n@"
+    60.354 AT send       1 "\n"
+    60.484 AT read  +   15 "\r\n+USOWR: 1,1\r\n"
+    60.494 AT read OK    6 "\r\nOK\r\n"
+0000060495 [app] INFO: updatesPending=0
+    60.934 AT read  +   16 "\r\n+UUSORD: 1,2\r\n"
+Socket 1: handle 1 has 2 bytes pending
+socketRecv: _cbUSORD
+    60.954 AT send      14 "AT+USORD=1,2\r\n"
+    60.964 AT read  +   18 "\r\n+USORD: 1,2,\"0a\""
+    60.974 AT read OK    6 "\r\nOK\r\n"
+0000060985 [wiring] TRACE: recv(=2)
+0000060985 [app] INFO: got 0x30
+0000060995 [app] INFO: got 0x61
+0000061495 [app] INFO: updatesPending=0
+0000062495 [app] INFO: updatesPending=0
+0000063495 [app] INFO: updatesPending=0
+0000064495 [app] INFO: updatesPending=0

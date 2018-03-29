@@ -17,6 +17,7 @@ private:
 	void runState();
 	void retryWaitState();
 
+	static const unsigned long START_TIME_MS = 5000;
 	static const unsigned long RETRY_TIME_MS = 15000;
 	static const unsigned long SEND_TIME_MS = 5000;
 

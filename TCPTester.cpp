@@ -18,7 +18,7 @@ void TCPTester::loop() {
 }
 
 void TCPTester::startState() {
-	if (Cellular.ready()) {
+	if (Particle.connected()) {
 		stateHandler = &TCPTester::connectState;
 	}
 }

@@ -1,0 +1,213 @@
+No Threading 
+0.8.0rc2
+Works
+OTA Flash starts at 20.578
+
+     5.227 AT read  +   17 "\r\n+UUSORD: 0,33\r\n"
+Socket 0: handle 0 has 33 bytes pending
+     5.237 AT send      17 "AT+USORF=0,1024\r\n"
+     5.257 AT read  +   71 "\r\n+USORF: 0,\"54.157.13.160\",5684,33,\"\x17\xfe\xfd\x00\x01\x00\x00\x00\x00\x00\x12\x00\x14\x00\x01\x00\x00\x00\x00\x00\x12VY*\xdd\xbb\xfa7E\xb1i\xd4x\""
+     5.269 AT read OK    6 "\r\nOK\r\n"
+0000005269 [system] TRACE: received 33
+0000005269 [comm.coap] TRACE: recieved ACK for message id=4
+0000005270 [comm.protocol.handshake] INFO: Handshake completed
+0000005271 [system] INFO: Send subscriptions
+0000005271 [comm.coap] TRACE: sending message id=5
+0000005272 [system] TRACE: send 41
+socketSendTo(0,54.157.13.160,5684,,41)
+     5.273 AT send      36 "AT+USOST=0,\"54.157.13.160\",5684,41\r\n"
+     5.274 AT read  +   17 "\r\n+UUSORF: 0,38\r\n"
+Socket 0: handle 0 has 38 bytes pending
+     5.285 AT read  >    3 "\r\n@"
+     5.335 AT send      41 "\x17\xfe\xfd\x00\x01\x00\x00\x00\x00\x00\a\x00\x1c\x00\x01\x00\x00\x00\x00\x00\aG\xcf]?b\xc7#J\x11\x8f\xd8T\xb6_\x18\xab\xdf\xde\xa0\xcc"
+     5.476 AT read  +   16 "\r\n+USOST: 0,41\r\n"
+     5.486 AT read OK    6 "\r\nOK\r\n"
+0000005486 [comm.dtls] INFO: session cmd (CLS,DIS,MOV,LOD,SAV): 4
+0000005486 [comm.dtls] INFO: session cmd (CLS,DIS,MOV,LOD,SAV): 3
+0000005487 [comm] INFO: Sending TIME request
+0000005487 [comm.coap] TRACE: sending message id=6
+0000005488 [system] TRACE: send 36
+socketSendTo(0,54.157.13.160,5684,,36)
+     5.488 AT send      36 "AT+USOST=0,\"54.157.13.160\",5684,36\r\n"
+     5.499 AT read  >    3 "\r\n@"
+     5.549 AT send      36 "\x17\xfe\xfd\x00\x01\x00\x00\x00\x00\x00\b\x00\x17\x00\x01\x00\x00\x00\x00\x00\b)\x91XP4\fh\xf7\xc5\x83!@\xe1\x13p"
+     5.690 AT read  +   16 "\r\n+USOST: 0,36\r\n"
+     5.700 AT read OK    6 "\r\nOK\r\n"
+     5.710 AT send      17 "AT+USORF=0,1024\r\n"
+     5.730 AT read  +   76 "\r\n+USORF: 0,\"54.157.13.160\",5684,38,\"\x17\xfe\xfd\x00\x01\x00\x00\x00\x00\x00\x13\x00\x19\x00\x01\x00\x00\x00\x00\x00\x13\xc7+\x9e~K\xc6\xe8h\x9aw<\x82\x14&fg\xcf\""
+     5.742 AT read OK    6 "\r\nOK\r\n"
+0000005742 [system] TRACE: received 38
+
+[ Modem::getSignalStrength ] = = = = = = = = = =
+     5.743 AT send       8 "AT+CSQ\r\n"
+     5.754 AT read  +   14 "\r\n+CSQ: 19,1\r\n"
+     5.764 AT read OK    6 "\r\nOK\r\n"
+0000005764 [comm.protocol] INFO: Sending 'M' describe message
+0000005764 [comm.coap] TRACE: sending message id=66a3
+0000005765 [system] TRACE: send 186
+socketSendTo(0,54.157.13.160,5684,,186)
+     5.766 AT send      37 "AT+USOST=0,\"54.157.13.160\",5684,186\r\n"
+     5.767 AT read  +   17 "\r\n+UUSORD: 0,33\r\n"
+Socket 0: handle 0 has 33 bytes pending
+     5.778 AT read  >    3 "\r\n@"
+     5.828 AT send     186 "\x17\xfe\xfd\x00\x01\x00\x00\x00\x00\x00\t\x00\xad\x00\x01\x00\x00\x00\x00\x00\t\x1d\xf0\xdf\x19\x11\xd0\xabj(\xa1e\xc1\xfco\x12\xed\xaf\xb0w\x8a\x1f\xac\xa6\xb5\xff\xf9\x91\xa3\xc2k\xf1\tk\xb6\xde\xde\x85\xdc}{H\xe0\xedN\x972\x19\x94\xba\x02\x19\xc8\xa1\xc5X\xe41IZ\x12\xb5$u!\xed\xb0\xcc(d\xa90\xdd\x18 \xa4q?g\xfc\xce\x8b\xad7\xb3\x1f\xc4\xb0,\x13d\x88:N\xb7\xfd\xf4;}Df\x80\x04\x89\xca\x96\xdbc\xd8Q\xbe\r\b\x15D\x97\x19\x95\x0f7]}\x8d\xdf!\xa7J\x80L\x05\xde^\x8e\x03\x17\xcc\xeb\xe9\x9b\x80\vs;\xec \xf0l\x06\xc4\xb4}\x8dWWOvLX\xcd\x01\xe7\x94y\xd3:;"
+     5.984 AT read  +   17 "\r\n+USOST: 0,186\r\n"
+     5.994 AT read OK    6 "\r\nOK\r\n"
+0000005994 [comm.protocol] INFO: rcv'd message type=1
+0000005994 [system] INFO: Cloud connected
+     6.005 AT send      17 "AT+USORF=0,1024\r\n"
+     6.025 AT read  +   71 "\r\n+USORF: 0,\"54.157.13.160\",5684,33,\"\x17\xfe\xfd\x00\x01\x00\x00\x00\x00\x00\x14\x00\x14\x00\x01\x00\x00\x00\x00\x00\x14>zSE\x10q\xf9ZH\x9b/a\""
+     6.037 AT read OK    6 "\r\nOK\r\n"
+0000006037 [system] TRACE: received 33
+0000006037 [comm.coap] TRACE: recieved ACK for message id=5
+0000006038 [comm.protocol] INFO: rcv'd message type=13
+0000006038 [app] INFO: updatesPending=0
+     6.038 AT read  +   17 "\r\n+UUSORF: 0,39\r\n"
+Socket 0: handle 0 has 39 bytes pending
+     6.049 AT send      17 "AT+USORF=0,1024\r\n"
+     6.069 AT read  +   77 "\r\n+USORF: 0,\"54.157.13.160\",5684,39,\"\x17\xfe\xfd\x00\x01\x00\x00\x00\x00\x00\x15\x00\x1a\x00\x01\x00\x00\x00\x00\x00\x15\x84=\xb7\x06\x8cZ\x90\x99\xb1\xd7\xa0[\xd8\"\xaf\xa4\x9dL\""
+     6.081 AT read OK    6 "\r\nOK\r\n"
+0000006081 [system] TRACE: received 39
+0000006081 [comm.coap] TRACE: recieved ACK for message id=6
+0000006082 [comm.protocol] INFO: Received TIME response: 1522317580
+0000006082 [comm.protocol] INFO: rcv'd message type=12
+0000006083 [app] INFO: connecting to 65.19.178.42:7123
+socketSocket(TCP)
+     6.083 AT send      12 "AT+USOCR=6\r\n"
+     6.094 AT read  +   13 "\r\n+USOCR: 1\r\n"
+     6.104 AT read OK    6 "\r\nOK\r\n"
+Socket 1: handle 1 was created
+socketConnect(1,port:7123)
+     6.104 AT send      32 "AT+USOCO=1,\"65.19.178.42\",7123\r\n"
+     6.585 AT read OK    6 "\r\nOK\r\n"
+0000006585 [app] INFO: connected
+     6.585 AT read  +   17 "\r\n+UUSORD: 0,38\r\n"
+Socket 0: handle 0 has 38 bytes pending
+     6.596 AT send      17 "AT+USORF=0,1024\r\n"
+     6.616 AT read  +   76 "\r\n+USORF: 0,\"54.157.13.160\",5684,38,\"\x17\xfe\xfd\x00\x01\x00\x00\x00\x00\x00\x16\x00\x19\x00\x01\x00\x00\x00\x00\x00\x16\xe9\x90\x15\x863\xfc\x92\xfa\x84\xf0\xa5\x94}Tp\xa2b\""
+     6.628 AT read OK    6 "\r\nOK\r\n"
+0000006628 [system] TRACE: received 38
+0000006637 [comm.protocol] INFO: Sending 'S' describe message
+0000006637 [comm.coap] TRACE: sending message id=66a4
+0000006639 [system] TRACE: send 716
+socketSendTo(0,54.157.13.160,5684,,716)
+     6.639 AT send      37 "AT+USOST=0,\"54.157.13.160\",5684,716\r\n"
+     6.650 AT read  >    3 "\r\n@"
+     6.700 AT send     716 "\x17\xfe\xfd\x00\x01\x00\x00\x00\x00\x00\n\x02\xbf\x00\x01\x00\x00\x00\x00\x00\n\x12\xb8\xc0\x83\xe0\xe2\xae\xb2@@Sl.\x12\x1a\r\bQ\x87\xeb&\x00(\xcdd\x8a\x8eQ\x9f\xdf\xc9\xd1\xe0\x1ah0\x18\x8d\xd7\x0e#:4S\xe3\x04\x8a\xa7\x15\xb8\x06\xa17\xa2\x900\"\xdd\x17\x98\xc2\xe0\xe6\x8d\xad\xc7\a\xd3A]\x1b\x91Y\x19\xe4\xa4\x0f\x1b\xb7\xc1P\xdc\xd02\xcdhH\xd7\xb7\x15\x945L\x92\x9f\x05\xc8\x86\xb4s\xe1\xd1wr\xabc\xf3\xac\x19\xd7\xf9\xd9(\xf3\x18_\xdd\x14\xe0.\r\xfd\xa7c\x05\xfa!\xd2\xfc\xdcCb\xb9B\xc0\x1e\xe3\xf4\xfd\x10/\xb2\x7fE\x15\x1c6A\xa0\xbe\xbf^\xdc\xc3\xb0\xd3z\xea\xe0XQ!\xa9\x99O\xc6\xf2>o`\x1b\x17s*\xbe\x8b\xe7\xf93\xce\xba.\xe8OM\x1b\xbc%\xaf*\xb8u!\x92m\x92\xb6_h\x1a \x82\xc7x\xef\xfd\xbe\xef\xd4@\xc6FD\x8ff\xe3\x9b\xd9\x0exNB}\xddN\x9eJ\x92C\x1e\xb3\x8c2\xfbT\xe5Z\x06\xd9\xff<\x05u\x18PNW:\x9a4\x13\xd5C}\x8b\x82g\x05\b\xe6\x15\xca\xc8\x17W\xc1@\t\x1a\xe5:,\xdb#\xb3\xbc\x13\xfe\x89-\x9ft\xda\xd9\x15/\xa5c\xd4=\xc61(\xd2\xda\x98N\xd3\xcd):u'sY\x9e5R\xcc\x91M\xaclC7\"\x9dT\x90~x\x7fy\xdb\x13\xae\xeb\xbc\xea\x85\fB.\x83\xc1\xd7\x00\xae\xd3\x1d\x17\xf4\xb7\xd7\x01\xc9c\xdfl\xd4\xf3\xf0\xb86eC\xf0*\x7fT\x93\x8d\xd9Oh\xa2\x92\x001,\xf9\xef\xcc\xc44\xe1S\xf5\xe5#O\xeeE\xfc\x13}\xa2%\xa9\x91Q\xb0\x16~\\\xfe\xae\f\xf1A9\x92\b\xf0@l#1\xf9r5\xedI\xaa\xaa\xde\xc5\x90(\xff\xf5O\xd7\x80UL3\xaa\xd3\x9a=XO\a\xc7W\xeaU\x86\x0e>\x83\x00I\x99bP\x97\x9c\xc7\xdb\b\xe8\x8f\xa7\xfa\x14Dma\rGLP\xc5\x9a\xd1\xfd.\xbb\xf0\xefa\x03^\x99\x8f\x1d\x02\x8a(\xf9P\xc9\xd6\xfaf\xaeL\xec\x0e\x1d\xe9U\xd5\xa87\x06\x9e\f\xdb \xcf\x1d\xd5Z\x99%\xa0\xecK/\xbdE4\x96\xac\xfbP\xf2kK\xee;\x97\xfa\xa4H\xe1\xd8R\xe8\x9a\x9a]o{&\x8d\xae\xfb\x9d\x12\xc7\xe7\xc0q\xc7\x96\xdaI}\x05\xed\xb8\x0f\x99\x86\xef5\xb5ud\x1a\xe9\x98\xd2\xd6\xd2\x05\xe2+\xe5Q\xe0\xb4\xbd\xfa*l\x81>`ZV`\xb30\xed0\nX\fS\x0f\r[\xba\xe3\xeds\xc66\xa1\x9b\xf1\x9c2+\x1f?i3\x91\xd1A|\x8d\xda\x06xFo\xfb\x99\xec\x1dr\r\x9dxs\x16+\ti\xa7\x80\xb8\x1a\x88\xf5\x99;v\xee\x81\xa1,FA\xcc\xd1\xeb-\b\x02\x83&\xed\xfaC\xbc\xbc\xd5\xc8\xc5 |I\xd8\x03\x19\xde5\xe8\x91\x16z\xcf\xdf]\xa1S\xcel\x8b7H\xf2\x1bPn\xab\xc8"
+     6.922 AT read  +   17 "\r\n+USOST: 0,716\r\n"
+     6.932 AT read OK    6 "\r\nOK\r\n"
+0000006932 [comm.dtls] INFO: session cmd (CLS,DIS,MOV,LOD,SAV): 4
+0000006940 [comm.dtls] INFO: session cmd (CLS,DIS,MOV,LOD,SAV): 3
+0000006941 [comm.protocol] INFO: rcv'd message type=1
+0000007051 [app] INFO: updatesPending=0
+     7.321 AT read  +   17 "\r\n+UUSORD: 0,38\r\n"
+Socket 0: handle 0 has 38 bytes pending
+     7.341 AT send      17 "AT+USORF=0,1024\r\n"
+     7.361 AT read  +   76 "\r\n+USORF: 0,\"54.157.13.160\",5684,38,\"\x17\xfe\xfd\x00\x01\x00\x00\x00\x00\x00\x17\x00\x19\x00\x01\x00\x00\x00\x00\x00\x17\x1bb>b\xf5\xb6\x0e\x85RY\xb8\xbcqiZ\x05?\""
+     7.373 AT read OK    6 "\r\nOK\r\n"
+0000007373 [system] TRACE: received 38
+0000007373 [comm.protocol] INFO: Sending 'A' describe message
+0000007374 [comm.coap] TRACE: sending message id=66a5
+0000007374 [system] TRACE: send 50
+socketSendTo(0,54.157.13.160,5684,,50)
+     7.375 AT send      36 "AT+USOST=0,\"54.157.13.160\",5684,50\r\n"
+     7.386 AT read  >    3 "\r\n@"
+     7.436 AT send      50 "\x17\xfe\xfd\x00\x01\x00\x00\x00\x00\x00\v\x00%\x00\x01\x00\x00\x00\x00\x00\v\xa9\x01\f\x13\xcc\x9b\xdc\x82\x10\x14;I\x82a\xf1\xeaM\x9e\xdeRO\xed\xa5\xfe\x89t\x8avz"
+     7.577 AT read  +   16 "\r\n+USOST: 0,50\r\n"
+     7.587 AT read OK    6 "\r\nOK\r\n"
+0000007587 [comm.dtls] INFO: session cmd (CLS,DIS,MOV,LOD,SAV): 4
+0000007587 [comm.dtls] INFO: session cmd (CLS,DIS,MOV,LOD,SAV): 3
+0000007588 [comm.protocol] INFO: rcv'd message type=1
+0000008058 [app] INFO: updatesPending=0
+0000009058 [app] INFO: updatesPending=0
+0000010058 [app] INFO: updatesPending=0
+0000011058 [app] INFO: updatesPending=0
+0000011598 [app] INFO: sending 0x00
+    11.598 AT send      14 "AT+USOWR=1,1\r\n"
+    11.608 AT read  >    3 "\r\n@"
+    11.658 AT send       1 "\x00"
+    11.788 AT read  +   15 "\r\n+USOWR: 1,1\r\n"
+    11.798 AT read OK    6 "\r\nOK\r\n"
+0000012058 [app] INFO: updatesPending=0
+    12.188 AT read  +   16 "\r\n+UUSORD: 1,2\r\n"
+Socket 1: handle 1 has 2 bytes pending
+socketRecv: _cbUSORD
+    12.208 AT send      14 "AT+USORD=1,2\r\n"
+    12.218 AT read  +   18 "\r\n+USORD: 1,2,\"00\""
+    12.228 AT read OK    6 "\r\nOK\r\n"
+0000012238 [app] INFO: got 0x30
+0000012248 [app] INFO: got 0x30
+0000013058 [app] INFO: updatesPending=0
+0000014058 [app] INFO: updatesPending=0
+0000015058 [app] INFO: updatesPending=0
+0000016058 [app] INFO: updatesPending=0
+0000016598 [app] INFO: sending 0x01
+    16.598 AT send      14 "AT+USOWR=1,1\r\n"
+    16.608 AT read  >    3 "\r\n@"
+    16.658 AT send       1 "\x01"
+    16.788 AT read  +   15 "\r\n+USOWR: 1,1\r\n"
+    16.798 AT read OK    6 "\r\nOK\r\n"
+0000017058 [app] INFO: updatesPending=0
+    17.188 AT read  +   16 "\r\n+UUSORD: 1,2\r\n"
+Socket 1: handle 1 has 2 bytes pending
+socketRecv: _cbUSORD
+    17.208 AT send      14 "AT+USORD=1,2\r\n"
+    17.218 AT read  +   18 "\r\n+USORD: 1,2,\"01\""
+    17.228 AT read OK    6 "\r\nOK\r\n"
+0000017238 [app] INFO: got 0x30
+0000017248 [app] INFO: got 0x31
+0000018058 [app] INFO: updatesPending=0
+0000019058 [app] INFO: updatesPending=0
+0000020058 [app] INFO: updatesPending=0
+    20.578 AT read  +   17 "\r\n+UUSORD: 0,49\r\n"
+Socket 0: handle 0 has 49 bytes pending
+    20.589 AT send      17 "AT+USORF=0,1024\r\n"
+    20.609 AT read  +   87 "\r\n+USORF: 0,\"54.157.13.160\",5684,49,\"\x17\xfe\xfd\x00\x01\x00\x00\x00\x00\x00\x18\x00$\x00\x01\x00\x00\x00\x00\x00\x18IN\x89>S\x95}{\x13dh\xd0\x95\v6\xbb\xc0\xb4<\xf9\xdf]RY/\x8e\x98\xb9\""
+    20.621 AT read OK    6 "\r\nOK\r\n"
+0000020621 [system] TRACE: received 49
+0000020621 [comm.coap] TRACE: sending message id=66a6
+0000020622 [system] TRACE: send 33
+socketSendTo(0,54.157.13.160,5684,,33)
+    20.622 AT send      36 "AT+USOST=0,\"54.157.13.160\",5684,33\r\n"
+    20.633 AT read  >    3 "\r\n@"
+    20.683 AT send      33 "\x17\xfe\xfd\x00\x01\x00\x00\x00\x00\x00\f\x00\x14\x00\x01\x00\x00\x00\x00\x00\f\xc3\x8fv\xaew\xa3\xe8#K\xfa\xd5\x88"
+    20.824 AT read  +   16 "\r\n+USOST: 0,33\r\n"
+    20.834 AT read OK    6 "\r\nOK\r\n"
+0000020835 [comm] TRACE: starting file length 14252 chunks 28 chunk_size 512
+0000020835 [comm.coap] TRACE: sending message id=7 synchronously
+0000020836 [comm.coap] TRACE: sending message id=7
+0000020836 [system] TRACE: send 36
+socketSendTo(0,54.157.13.160,5684,,36)
+    20.837 AT send      36 "AT+USOST=0,\"54.157.13.160\",5684,36\r\n"
+    20.848 AT read  >    3 "\r\n@"
+    20.898 AT send      36 "\x17\xfe\xfd\x00\x01\x00\x00\x00\x00\x00\r\x00\x17\x00\x01\x00\x00\x00\x00\x00\r\xa1R\xf6\xf8|U\x19G\xe7\xf7\xcbG\x93\xd5\x85"
+    21.039 AT read  +   16 "\r\n+USOST: 0,36\r\n"
+    21.049 AT read OK    6 "\r\nOK\r\n"
+    21.379 AT read  +   17 "\r\n+UUSORD: 0,33\r\n"
+Socket 0: handle 0 has 33 bytes pending
+    21.389 AT send      17 "AT+USORF=0,1024\r\n"
+    21.409 AT read  +   71 "\r\n+USORF: 0,\"54.157.13.160\",5684,33,\"\x17\xfe\xfd\x00\x01\x00\x00\x00\x00\x00\x19\x00\x14\x00\x01\x00\x00\x00\x00\x00\x19\xdf\x8b\xc5\x13\xcbG\xd4n\xadI\rr\""
+    21.421 AT read OK    6 "\r\nOK\r\n"
+0000021421 [system] TRACE: received 33
+0000021421 [comm.coap] TRACE: recieved ACK for message id=7
+0000021422 [comm.protocol] INFO: rcv'd message type=5
+    21.422 AT read  +   19 "\r\n+UUSORD: 0,2228\r\n"
+Socket 0: handle 0 has 2228 bytes pending
+    21.433 AT send      17 "AT+USORF=0,1024\r\n"
+    21.503 AT read  +  596 "\r\n+USORF: 0,\"54.157.13.160\",5684,557,\"\x17\xfe\xfd\x00\x01\x00\x00\x00\x00\x00\x1a\x02 \x00\x01\x00\x00\x00\x00\x00\x1a\x82v\x1c\xc7OF\xf7DZ\xe8TQ\xbbJ\xb3[>\xce\xa3Q#\x17n\xe6^\x91\xc6\xad;M\xd0B\x9d\xdf\xe1)\x91F)\xad\x19Cy\x8ccnS}\xc5\xb8\x82y\xa8!\xdb\xec\x04ip\x9c o\x1e\x95\xd9\xf7\xc1\xae\xf1-\x936\x94i,\xa5\x90c\xaa\xd4?\x94\xb0X\xc7\xbfJ2\x00o\xe6\xe7:U\xb2\a\xe5\x12\xea\xc7I\"\v\xa1\x95\xcfS\xcet\x1a\xe4\x87I\v\x0e1\xcc$\xcc>\x14]m\xf1d\x19C^\xa5&\xe0\x01?\xddh\xeb\xf5?N\xd3\x99\xc4<\x0fK\xcf\xdcf\x02\xa1I\xd6\\#\x0f(\xb1\xbf\xd7HOSi'Wz\x923\xf2\t\xfbL\x1aaY\x84\xea\\\x1c\xb9%\xbb\x00\xad\xf1\x03D\ab\xd4Q~\xf4\x11\xc9\xdf\xcay\x92<U\xf1\xc4\xe3\t\x19\xb1W-\x85\x8a\xef\x95\xdby\x8fg\xfb,\xe7\xe4\x94=\xe6\x03\xde\xcc\xe8\x1c\x8d`E\xdd\xa7\x18\x8e\x9b\xbd6\x8257M\xc2\x8ek\xc7\xba^\xc1;\x90\t:+.\x01\xf6E\xac_\xd8?Zl\x9fm9\x19=9\xca\x9a\xa0N)AJ\x8d!\xbcc\xd0\xab.\xc3\xe5^\x00\x19\xa5\xd1D\xca\xb1\xb6\x12r\xb5\xad\x9cTAj\xc3\xc6:\"\x97C\x0f\x1a\xae\x80l\xcfKo0>\xf7\xa4\xe4\xe8\xb6\x87\xc7\x8c6\x95A\xf8gv\xca\x14~\xbd\x06 \xb5\xbd+T\x9b'W\xa4\xc8\xf8#\xbb\xa2\xf1\xf8\xc5\xd3\xfa\x15s\x0e\xc8f%\xe2\xbb\x84\xf1\xc4:\xca&C\xce\xc31\x9dM\xf0<\xf9\xd5\x01k\xaaj(\n\xf6c:&\xcd\\F\xdd|\xf7\xf8%\xd7\x17$\x18\x8d\xdaSw7\xf9\xc3\xfe\x03\xde\xd1\xa9\xcb\x16\xc3\xca\xad\x7fq\x80\xe1P~\x14>\xe8\xac\xb8\xdf\x91\xf1\xae\f\x02\x85\nbn$\xdd\xaa'\xbf~\xc9\xd8\xc4\xdbn\xab\x8b\xd4\xe1\xbeZ\x89\x87\xa9]\xf6}\xf0\xeb\xb9\xe7g\xbe<\xc5=\x99\xd8\x1fj\xf4\xd9o\x8b\xc3\xec\x12z\xdb\x14R\x12\xab\xe9E\xf2w_pv\xe3_\x8f!\x9d\x81T\xffJ\xcb\xfc\xcd\x94+J\xb6\xfc\x9f\x837N\xe7uW\x81\xdb\xf8\xa2\x8e|O\xe9*Iq\xb6\x1e\x19\""
+    21.531 AT read OK    6 "\r\nOK\r\n"
+0000021531 [system] TRACE: received 557
+0000021532 [comm] TRACE: chunk
+0000021533 [comm] TRACE: chunk idx=0 crc=1 fast=1 updating=1
+0000021535 [comm.protocol] INFO: rcv'd message type=7
+    21.535 AT read  +   20 "\r\n+UUSORF: 0,11697\r\n"
+Socket 0: handle 0 has 11697 bytes pending
+    21.546 AT send      17 "AT+USORF=0,1024\r\n"
+    21.616 AT read  +  596 "\r\n+USORF: 0,\"54.157.13.160\",5684,557,\"\x17\xfe\xfd\x00\x01\x00\x00\x00\x00\x00\x1b\x02 \x00\x01\x00\x00\x00\x00\x00\x1b\xa6T\f\xbd\xf9\x120u\xd6\x96\x13\x82/\xc16h\xd9x\x1dAi\xe9h\x88q\xab\xd0\xa2\xfa\xf2\x81f\xf0\xab\xa2\x1aX\v\xb1\xe4\xf8t3]\x7f[\x89i\x8b\x8b\xde\xc3^[\x94\xc4*\xdf\xb3\":k\xa4\v:\xd8ks\x13\xa2_u<\xecj\xbcl\xcd\xddK`p\x9f\xc9\xdb\x14\xf9X\xa8O\xa3\x973\x15\x06\x9e\a\x1dZ\xbf~N\x92\xb92c=Z^w\xcf\xdf*\x1a\x15\x18\xc3\x03\xf3\x89\x1d}\xe6\x96\b\xe8K/\xdc\n\xad\xa1\x87\x8cs\x8b\r\x87\xcd\x8b\x88\xbe\x95\xf0\xacH\xbev\xd0\x87!\xec\x95\xb4\xdb\xa7O,\x1cP0\x1e\xd2X\xc9\xc5\xa6gKquP\x87\x88)\x87\xcf\x12\xc0\xed\xbe\xb2^\xde\x04x\x12\xeaY\xb5=\xd0YD\xae\xb6\x97i\x01\x04\x97\"H\x94\a\x05\xe2s\b\x9esi\xa6W_@\x84\xbc\xf7\x8e\xa8\xfdxVo1\r1};\xb4\xc1\x80`M\xa3[KX\xdd\xdan\xae\xa0l\xbc\xac8\xeb\x04\x7f`Z\xbc\x1aO!~\xe7j\xff0]\xc2\xc0<\xde\xed\x7f\xee\xb7?\xae\xd0\xec\xee\x95-\xec-\x95\xd2G+\x1c\x13\x83\xa2!x\x7f\t\xc6\xf6\xe0\xfa\xc9.6j\xbd\xfc\xbbQ\a9\xfb\xf8A^B\xff=g\x9f~\x9a\xa3\x05\xd81\xc8\xed\xe5\x87\xe0i\x1c\xaa\x8f\xa0(\xe5\xee6\xe1\xb9\xa5\x1bx\x81\xca]\x17\x1a\x15NQ\xab\nc%i\xb2\x8b&*Q\x9diG\x94\xbc\x06Y\xbd\x1e\nZ\xac\xda[\\ ]H\x8a\xf0\xe97+\xb6\xfc\xab\x11\x82]<\xf8Rp-\x83O\x8b\xed\x00wOS\xc5\x94{M\xc3\xf2\xa5~\x18\x8d\xb8T\x19\xa2\x178S\x00\xb8@\x8ee\x03\xab\xa2e\x82d\xbc\xb8\xff\x1c\x9c\x01a^\x88x\x93^\xe8!r\xf1\xdbxC\xcee\x94\xaaM\xe7\xc7\x7f\xee2\v\x19\x00u`\xcc\xef\xa4_\xb6\xb6X\xd0\x878\x1e\x8fL\xcc\xa9\xc6\x8f1\v\xf4\xdf(\xda\x14}\xdc\x99\xe3\xddY~wC\xa3\xe4\x16\xc7f\xcf^ph&\xfa\x17y\x17\x9c\xa90\x01h\x88C\xf8c\x02\xd2P\x0f\xf2Y}\xb1O\x974\xa5\xa1\xd9\xbc\xde\xa8\x99\""
+    21.644 AT read OK    6 "\r\nOK\r\n"
+0000021644 [system] TRACE: received 557
+0000021645 [comm] TRACE: chunk
+0000021646 [comm] TRACE: chunk idx=1 crc=1 fast=1 updating=1
+0000021648 [comm.protocol] INFO: rcv'd message type=7
+    21.648 AT read  +   20 "\r\n+UUSORF: 0,14518\r\n"
+Socket 0: handle 0 has 14518 bytes pending
